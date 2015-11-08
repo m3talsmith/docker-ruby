@@ -16,4 +16,6 @@ RUN tar -zxvf ruby-1.9.3-p448.tar.gz && \
   ./configure && \
   make && make install
 
+RUN apt-get install -yq libyaml-dev
+
 RUN gem install bundler --no-ri --no-rdoc
