@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -yq \
   python-software-properties\
   git\
   imagemagick libmagickcore-dev libmagickwand-dev\
+  libyaml-dev\
   wget
 
 RUN mkdir /src && cd /src && \
@@ -15,7 +16,5 @@ RUN tar -zxvf ruby-1.9.3-p448.tar.gz && \
   cd ruby-1.9.3-p448 && \
   ./configure && \
   make && make install
-
-RUN apt-get install -yq libyaml-dev
 
 RUN gem install bundler --no-ri --no-rdoc
